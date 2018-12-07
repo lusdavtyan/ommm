@@ -1,0 +1,202 @@
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Surviving AUA</title>
+	</head>
+	<body onload="done()">
+		
+		<div id="scoreDiv">
+
+			<span id="score">0</span>
+			 
+			<img src="https://www.byui.edu/Images/admissions%20images/icons/concurrent%20enrollment%20icons-03.png" id="cn">
+		</div>
+		<div class="gameHome" id="startPage">
+			<div id="gameTitle">Surviving AUA</div>
+			<button onclick="ld()" id="startButton"><span style="font-size:20px">Loading Assets<br>Loading...</span></button><br>
+			<div id="a"><div id="loading"></div></div>
+			<div id = "intro"><p><b>Use left/right arrow key to collect A's and avoid F's<b></p></div>
+			<style>
+				
+			
+
+			body{
+				margin:0;
+				height:100vh;
+				width:100vw;
+			}
+			
+			#mainContainer {
+				position:absolute;
+				top:0;
+				left:0;
+				transform-origin:0% 0%;
+				width:100%;
+				transform:  translateX(0px) rotate(0deg);
+				overflow: hidden;
+			}
+			
+			#intro {
+				font-size: 100px
+}
+			#city {
+				position:absolute;
+				top:0;
+				left:0;
+				height:30vw;
+				width:100%;
+				z-index:-1;
+				display: block;
+			}
+			
+			#myCanvas {
+				background:transparent;
+				z-index: 100;
+			}
+			
+			.aImg {
+				display:none;
+			}
+			
+			#mainContainer {
+				display:none;
+			}
+			
+			#scoreDiv {
+				position:absolute;
+				right:0;
+				background:transparent;
+				display:inline-block;
+				border:1px solid black;
+				padding:10px 100px 5px 10px;
+				border-radius:0px;
+				font-weight:1000;
+				font-size:25px;
+				height:30px;
+				margin:10px;
+				z-index:500;
+				transform-origin:100% 0%;
+			}
+			
+			#cn {
+				height:50px;
+				width:50px;
+				background:black;
+				position:absolute;
+				right:-10px;
+				top:-10px;
+				border-radius:50%;
+			}
+			
+			.gameHome {
+				position:absolute;
+				top:0;
+				left:0;
+				background:white;
+				height:100vh;
+				width:100vw;
+				transform-origin:0% 0%;
+				text-align:center;
+			}
+			
+			#gameTitle {
+				text-align:center;
+				font-family:serif;
+				font-size:100px;
+				margin-top:100px;
+				font-weight:1000;
+				color: blue
+			}
+			
+			#startButton {
+				font-size:50px;
+				display:inline-block;
+				background:#1fa456;
+				color:white;
+				padding:10px 25px;
+				margin-top: 50px;
+				border:none;
+				border-radius:50px;
+				box-shadow:5px 5px #000;
+				outline:none;
+			}
+			
+			#gameConf {
+				width:50%;
+				height:100%;
+				background:red;
+			}
+			
+			#gameDifficulty {
+				width:100%;
+				height:50%;
+				background:blue;
+				padding:0;
+				margin:0;
+			}
+			
+			.diffOpt {
+				background:green
+				font-family:cursive;
+				font-size:20px;
+				text-align:center;
+			}
+			
+			#loading {
+				height:60px;
+				width:60px;
+				background:transparent;
+				display:inline-block;
+				border:10px solid transparent;
+				border-bottom-color:red;
+				border-left-color:red;
+				border-radius:50%;
+				animation:ld 1s linear infinite;
+			}
+			
+			@keyframes ld {
+				0% {
+					transform:translateY(-165px) rotate(0deg);
+				}
+				100% {
+					transform:translateY(-165px) rotate(360deg);
+				}
+			}
+			</style>
+<script type="text/javascript">
+				(function(){
+					"use strict"
+					var hw = window.innerWidth || 360;
+					var hh = window.innerHeight || 560;
+					var gameHome = document.getElementById("startPage");
+					var scoreDiv = document.getElementById("scoreDiv");
+					if(hh > hw){
+						gameHome.style.height = hw+"px";
+						gameHome.style.width = hh+"px";
+						gameHome.style.transform = "translateX("+hw+"px) rotate(90deg)";
+						scoreDiv.style.bottom = 0;
+						scoreDiv.style.transform = "rotate(90deg) translateX(40px)";
+					}
+				})();
+			</script>
+
+			
+		</div>
+		
+		
+		<div id="mainContainer" style="background:black" >
+			<img id="city" src="http://aua.am/wp-content/uploads/2012/02/IMAG0648.jpg" />
+			<canvas id="myCanvas"></canvas>
+		</div>
+		<img class="aImg" id="t1" src="https://data2.polantis.com/image1000/data/562/16258/Cherry%20Tree%20in%20Bloom_3D.png" />
+		<img class="aImg" id="t2" src="https://png2.kisspng.com/20171209/6d7/5a2c0f3d38eae3.9167593215128369252331.png" />
+		<img class="aImg" id="t3" src="https://clipart.info/images/ccovers/1495919167red-tree-png--image.png" />
+		<img class="aImg" id="t4" src="https://pngimage.net/wp-content/uploads/2018/06/purple-tree-png-3.png" />
+		<img class="aImg" id="c1" src="http://origin.lcv.org/wp-content/uploads/2018/01/f-grade.png" />
+		<img class="aImg" id="char" src="bbr.png" />
+		<script src="survivingAUA.js">
+		</script>
+	</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Quiz</title>
+	<link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="Quiz.css">
+</head>
+<body>
+	<div id = "storesQuiz" class ="store">
+		<div class="title">Quiz ^_^</div>
+		<div id="question" class="question"></div>
+		<label class="option"><input type="radio" name="option" value="1" /> <span id="optn1"></span></label>
+		<label class="option"><input type="radio" name="option" value="2" /> <span id="optn2"></span></label>
+		<label class="option"><input type="radio" name="option" value="3" /> <span id="optn3"></span></label>
+		<label class="option"><input type="radio" name="option" value="4" /> <span id="optn4"></span></label>
+		<button id="nextBtn" class="next-btn" onclick="loadNextQuestion();">Next</button>
+	</div>
+	<div id="result" class="store result" style="display:none;">
+	</div>
+	<script type="text/javascript" src="question.js"></script>
+	<script type="text/javascript" src="quizbv.js"></script>
+</body>
+</html>
